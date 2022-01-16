@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 #SQLALCHEMY_DATABASE_URL = "sqlite:///./algorithm_integration.db"
-SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://airflow:airflow@localhost:33060/airflow"
+SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://inference_user:inference_pass@algorithm-mysql:3306/inference_db"
 #SQLALCHEMY_DATABASE_URL = ""postgresql://user:password@postgresserver/db""
 
 engine = create_engine(
