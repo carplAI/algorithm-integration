@@ -54,7 +54,6 @@ async def data_upload(file: UploadFile = File(...), authorized: bool = Depends(v
         )
     try:
         ext = file.filename.split('.')[-1]
-        print(file.filename)
         if ext not in constants.ACCEPTABLE_EXTS:
             message = "Invalid file format. Accepted formats: %s " % ', '.join(constants.ACCEPTABLE_EXTS)
             return JSONResponse({"status": "fail", "message": message})
@@ -71,7 +70,6 @@ async def data_upload(file: UploadFile = File(...), authorized: bool = Depends(v
         x = Properties(id=id, job_id=fullname, study_id='', payload='', status='Queued', path=fullpath)
         db = SessionLocal()
         db_result = database.add_job_to_db(db=db, inference_data=x)
-        print(db_result)
         return JSONResponse({"status": db_result})
     except Exception as e:
         print("There is some error at ", e)
@@ -91,7 +89,7 @@ async def fetch_response(study_instance_uid: str = Form(...), authorized: bool =
 
 def prediction(job_id, path, results_path, jpg_path):
     '''
-    Change this function according to your requirement
+    Change this function to include your inferencing logic
     '''
     response, results_ = inference_xray(path, results_path, jpg_path)
     print(response, results_)
