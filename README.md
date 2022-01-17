@@ -1,5 +1,5 @@
 # Inferencing integration onto CARPL (Binary Classification Algorithm)
-![AutoAlgorithmIntegration](https://user-images.githubusercontent.com/48349718/149273334-4cd58f47-67b1-4c31-a782-207444481dd7.png)
+![AutoAlgorithmIntegration](https://user-images.githubusercontent.com/48349718/149814375-a3e04bf1-149b-42e2-ae06-30358a092dee.png)
 
 # Use an existing model integrated using this framework
 We implemented the following [chest x-ray algorithm](https://github.com/dattran2346/chestX-ray-14).
